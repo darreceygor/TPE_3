@@ -1,0 +1,166 @@
+
+/*MENU PRINCIPAL*/
+nav {
+    background: lightblue; 
+    height: 10vh;
+    grid-area: nav;
+    padding: 15px;
+
+}
+
+nav ul {
+    float: right;
+    margin-right:25px ;
+    display: none;
+}
+
+/*todos los items de la lista en linea*/
+nav ul li {
+    display: inline-block;
+    line-height: 80px; /*especifica la altura mínima de los cuadros de línea dentro del elemento.*/
+    margin: 0 15px;
+}
+
+/* tamaño de letras y mayusc*/
+nav ul li a {
+    position: relative;
+    font-size: 18px;
+    padding: 5px 0;
+    text-transform: uppercase; /*todo a mayusculas*/
+}
+
+#check:checked~ul {
+    display: block;
+    left: 0;
+}
+
+#check {
+    display: none;
+}
+
+/*items de menu en bloque */
+nav>ul {
+    position: fixed;
+    width: 50%;
+    /*height: 80vh;*/
+    background: #34495e;
+    top: 45%;
+    left: -110%; /*oculta el bloque del menu*/
+    text-align: center;
+    transition: all .5s;
+    display: block;
+}
+
+nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px ;
+}
+
+/*FIN MENU PRINCIPAL*/
+
+
+
+
+#firma {
+    width: auto;
+    height: 25px;
+    padding: 0.4rem;
+    color: white;
+    background-color: rgb(63, 133, 139);
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.logo,
+.menu,
+.cancel {
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-content: center;
+} 
+
+.menu, 
+.cancel {
+    color:white;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor:pointer; /*cambia a manito*/
+}
+
+.cancel {
+    display: none;
+}
+
+
+
+
+
+
+/*BREAKPOINT CELULAR*/
+
+@media only screen and (min-width: 720px) {
+    
+
+    #check:checked~ul {
+        display: block;
+        left: 0;
+    }
+    #check~ul {
+        display: block;
+    }
+
+    
+}
+
+/*BREAKPOINT PC*/
+
+@media only screen and (min-width: 1024px) {
+ 
+    .menu,
+    .cancel {
+        display: none;
+    }
+    #check:checked~ul {
+        display: block;
+        left: 0;
+    }
+
+
+    #check~ul {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        float: right;
+        position: static;
+        margin-right: 25px;
+        width: 75%;
+        height: 60px;
+        background: #34495e;
+        border-radius: 30px;
+        top: 45%;
+        left: 0%;
+        /*oculta el bloque del menu*/
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: inline-block;
+        line-height: 80px; /*especifica la altura mínima de los cuadros de línea dentro del elemento.*/
+        margin: 0 15px;
+    }
+    /* tamaño de letras y mayusc*/
+    nav ul li a {
+        position: relative;
+        font-size: 18px;
+        padding: 5px 0;
+        text-transform: uppercase; /*todo a mayusculas*/
+    }
+}
+
+

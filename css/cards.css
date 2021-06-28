@@ -1,3 +1,6 @@
+/** ADMIN.HTML - TABLA, FORM, ITEMS *************************/
+/************************************************************/
+
 table, td,th,tr{
     border: solid 1px red;
     width: auto;
@@ -14,6 +17,9 @@ form{
     margin-top: 10px;
 }
 
+tr:nth-child(even) { /*todos los elementos pares de la tabla tendran backgroun diferente*/
+  background-color: #3a4e4e;
+}
 
 #crud-title-op{
     font-size: 20px;
@@ -89,34 +95,31 @@ label {
   }
 
 
-  ***********************
-  ***********************
-
-    .card .text {
-        padding: 0 20px 20px;
-    }
-
-    .item {
-        background-color: #305250;
-        width: 300px;
-        height: 450px;
-        padding: 5px;
-        margin: 5px;
-        border-radius: 5%;
-    } 
-
-    #item-descripcion {
-        height: 400px;
-        background-color: #3b515f;
-        border-radius: 5% 5% 0 0;
-        margin: 5px;
-    }
+/** ADMIN.HTML - ITEM, IMGs *************************/
+/****************************************************/
 
    #botones{
        float: right;
    }
 
+   .img-item {
+    max-width: 250px;
+    max-height: 200px;
+    margin: 2px;
+    background-color: white;
+
+
+   }
+
+   .item{
+      margin: 10px;
+      background-color: #305250;
+      padding: 8px;
+      width: 300px;
+      height: 500px;
+      border: solid 1px black;
+   }
 
    
 
-   
+

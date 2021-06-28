@@ -1,9 +1,13 @@
+/** GENERAL - BODY, HEAD, FOOT ******************************/
+/************************************************************/
+
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
     color:black;
+    box-sizing: border-box;
 }
 
 body {
@@ -21,53 +25,20 @@ header, footer {
 }
 
 
-nav {
-    width: 100%;
-    min-height: 2vh;
-    background-color: cadetblue;
-    margin:1vh 0 1vh 0;
-    color: aliceblue;
-    float: right;
-    
-    
-}
 
-nav ul {
-    float: right;
-    margin-right:25px ;
 
-}
 
-nav ul li {
-    display: inline-block;
-    line-height: 80px; /*especifica la altura mínima de los cuadros de línea dentro del elemento.*/
-    margin: 0 15px;
-}
 
-nav li {
-    display: inline;
-    margin:2vh; 
 
-}
-
-nav li a {
-
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 2.5vh;
-}
 
 .logo {
     width: 5vh;
     height: 5vh;
-}
-
-nav ul {
     float: right;
-    margin-right:25px ;
-
+    display: inline;
 }
+
+
 
 
 .btn-menu {
@@ -82,60 +53,64 @@ nav ul {
 
 
 
-/*****************************************/
-/******************************************/
+/** INDEX.HTML - QUERYs *************************/
+/************************************************/
+
 
 #catalogo {
-    display: grid;
-    grid-template-columns: 1fr;
-    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: rgb(59, 85, 67);
 
 }
 
 
-@media screen and (min-width: 420px){
+@media only screen and (min-width: 420px){
 
     #catalogo {
-        display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    }
-
-    #img-item {
-        width: 22vh;
-        height: 22vh;
-    }
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap; 
     
+    }
+   
 }
 
-@media screen and (min-width: 820px){
+@media only screen and (min-width: 720px){
 
     #catalogo {
-        display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
     }
 
-    .img-item {
-        width: 20vh;
-        height: 20vh;
 
-    }
-    
-    
+
+      
 }
 
 @media screen and (min-width: 1024px){
 
     #catalogo {
-        display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
     }
 
-    #img-item {
-        width: 18vh;
-        height: 18vh;
+    nav a {
+        display: inline;
     }
     
+    .logo {
+        width: 5vh;
+        height: 5vh;
+        float: right;
+        display: none;
+    }
+
 }
 
 
