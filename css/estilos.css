@@ -1,0 +1,518 @@
+
+:root {
+    --contenido-color: rgb(18.8, 52.2, 55.3);
+    /*variable de uso comun en contenido*/
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color:black;
+}
+
+body {
+    margin:0 5vh 0 5vh;
+    background-color: rgb(35, 70, 71);
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+
+header, footer {
+    width: 100%;
+    height: 25vh;
+    background-image: url("../img/pc.jpg");
+
+}
+
+
+nav {
+    width: 100%;
+    min-height: 2vh;
+    background-color: cadetblue;
+    margin:1vh 0 1vh 0;
+    color: aliceblue;
+    float: right;
+    
+    
+}
+
+nav ul {
+    float: right;
+    margin-right:25px ;
+
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px; /*especifica la altura mínima de los cuadros de línea dentro del elemento.*/
+    margin: 0 15px;
+}
+
+nav li {
+    display: inline;
+    margin:2vh; 
+
+}
+
+nav li a {
+
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5vh;
+}
+
+.logo {
+    width: 5vh;
+    height: 5vh;
+}
+
+nav ul {
+    float: right;
+    margin-right:25px ;
+
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr                    /*head*/
+                        0.5fr                    /*nav*/
+                        0.5fr                    /*sidebar*/
+                        repeat(8, 1fr)         /*contenido*/
+                        1.2fr                      /*foot*/
+    ;
+    grid-template-areas:
+        "header"            /*2.2*/
+        "nav"               /*0.4*/
+        "sidebar"           /*2.2*/
+        "contenido1"        /*1.2*/
+        "contenido2"        /*1.2*/
+        "contenido3"        /*1.2*/
+        "contenido4"        /*1.2*/
+        "contenido5"        /*1.2*/
+        "contenido6"        /*1.2*/
+        "contenido7"        /*1.2*/
+        "contenido8"        /*1.2*/
+        "footer";           /*1*/
+
+}
+
+.container_armado {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr                    /*head*/
+                        0.4fr                    /*nav*/
+                        3.3fr
+                        3.3fr                   /*contenido*/
+                        1fr                      /*foot*/
+    ;
+    grid-template-areas:
+        "header"            /*2.2*/
+        "nav"               /*0.4*/
+        "armarpc"          /*3.2*/ 
+        "pcarmada"         /*3.2*/
+        "footer";           /*1*/
+    
+}
+
+.container_admin{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr                    /*head*/
+                        0.4fr                    /*nav*/
+                        3.3fr
+                        1fr                      /*foot*/
+    ;
+    
+    grid-template-areas:
+        "basededatos"      
+  
+}
+
+
+
+.logo,
+.menu,
+.cancel {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 10%;
+} 
+
+.menu, 
+.cancel {
+    color:white;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor:pointer; /*cambia a manito*/
+}
+
+.cancel {
+    display: none;
+}
+
+
+input, 
+option{
+    color:black;
+}
+
+/*MENU PRINCIPAL*/
+
+
+/*todos los items de la lista en linea*/
+
+
+/* tamaño de letras y mayusc*/
+
+
+
+#firma {
+    width: auto;
+    height: 25px;
+    padding: 0.4rem;
+    color: white;
+    background-color: rgb(63, 133, 139);
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+
+/*ITEM*/
+
+.item {
+    margin: 10px;
+    padding: 10px;
+
+}
+
+#img-item {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+
+}
+
+#img-item-adm {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+
+}
+
+#crud-title-op{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: aqua;
+    width: 120px;
+    height: 50px;
+}
+
+#agregarItem,
+.edit,
+.delete,
+.enviar
+{
+    color:black;
+    margin: 10px;
+    padding: 5px;
+}
+
+
+/*FORMATEA TABLA*/
+th {
+    background-color:  lightblue;
+    color: black;
+}
+
+tr:nth-child(even) { /*todos los elementos pares de la tabla tendran backgroun diferente*/
+    background-color: #3a4e4e;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    vertical-align:middle;
+}
+
+th #alinea {
+    text-align: left;
+}
+
+th, tr {
+    font-style: italic;
+    font-size: 15px;
+    padding: 7px;
+}
+
+caption {
+    font-size: 20px;
+    padding: 15px;
+
+}
+
+/*FIN FORMATEA TABLA*/
+
+
+/*BREAKPOINT CELULAR*/
+
+@media screen and (min-width: 720px){
+
+    .container {
+        grid-template-columns: 0.6fr repeat(2, 1fr);
+        /*3 columnas*/
+        grid-template-rows: 1fr 0.2fr repeat(4, 1.2fr) 0.8fr;
+        /*7 filas*/
+        grid-template-areas:
+            "header header header"
+            "nav nav nav"
+            "sidebar contenido1 contenido2"
+            "sidebar contenido3 contenido4"
+            "sidebar contenido5 contenido6"
+            "sidebar contenido7 contenido8"
+            "footer footer footer";
+        grid-gap: 0.2rem;
+    }
+
+    .nav-lateral {
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "titulocategoria titulocategoria titulocategoria"
+            "categoria1 categoria2 categoria3"
+            "categoria4 categoria5 categoria6";
+    }
+
+    .container_armado {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 0.8fr 1.2fr;
+        grid-template-rows: 0.5fr                    /*head*/
+                            0.4fr                    /*nav*/
+                            4.6fr                    /*contenido*/
+                            2fr                      /*foot*/
+        ;
+        grid-template-areas:
+            "header header"             /*2.2*/
+            "nav nav"                   /*0.4*/
+            "armarpc pcarmada"        /*4.4*/ 
+            "footer footer";            /*1*/
+        grid-gap: 0.2rem;
+    
+    }
+
+    
+
+    .nav-lateral {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 0.4fr);
+        /*categorias*/
+        grid-template-areas:
+            "titulocategoria"
+            "categoria1"
+            "categoria2"
+            "categoria3"
+            "categoria4"
+            "categoria5"
+            "categoria6";
+    }
+
+    #check:checked~ul {
+        display: block;
+        left: 0;
+    }
+    #check~ul {
+        display: block;
+    }
+
+    
+}
+
+/*BREAKPOINT PC*/
+
+@media only screen and (min-width: 1024px) {
+    .container {
+        grid-template-columns: 0.6fr repeat(4, 1fr);
+        /*5 4columnas*/
+        grid-template-rows: 1fr 0.2fr 1.2fr 1.2fr 0.8fr;
+        /*5 filas*/
+        grid-template-areas:
+            "header header header header header"
+            "nav nav nav nav nav"
+            "sidebar contenido1 contenido2 contenido3 contenido4"
+            "sidebar contenido5 contenido6 contenido7 contenido8"
+            "footer footer footer footer footer";
+        grid-gap: 0.2rem;
+    }
+
+    .nav-lateral {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 0.4fr);
+        /*categorias*/
+        grid-template-areas:
+            "titulocategoria"
+            "categoria1"
+            "categoria2"
+            "categoria3"
+            "categoria4"
+            "categoria5"
+            "categoria6";
+    }
+
+    
+    .menu,
+    .cancel {
+        display: none;
+    }
+    #check:checked~ul {
+        display: block;
+        left: 0;
+    }
+
+
+    #check~ul {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        float: right;
+        position: static;
+        margin-right: 25px;
+        width: 75%;
+        height: 60px;
+        background: #34495e;
+        border-radius: 30px;
+        top: 45%;
+        left: 0%;
+        /*oculta el bloque del menu*/
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: inline-block;
+        line-height: 80px; /*especifica la altura mínima de los cuadros de línea dentro del elemento.*/
+        margin: 0 15px;
+    }
+    /* tamaño de letras y mayusc*/
+    nav ul li a {
+        position: relative;
+        font-size: 18px;
+        padding: 5px 0;
+        text-transform: uppercase; /*todo a mayusculas*/
+    }
+}
+
+
+
+
+/*CONTENIDO GRUPO DE ARTICULOS*/
+#contenido1 {
+    background-color: var(--contenido-color);
+    grid-area: contenido1;
+}
+
+#contenido2 {
+    background-color: var(--contenido-color);
+    grid-area: contenido2;
+}
+
+#contenido3 {
+    background-color: var(--contenido-color);
+    grid-area: contenido3;
+}
+
+#contenido4 {
+    background-color: var(--contenido-color);
+    grid-area: contenido4;
+}
+
+#contenido5 {
+    background-color: var(--contenido-color);
+    grid-area: contenido5;
+}
+
+#contenido6 {
+    background-color: var(--contenido-color);
+    grid-area: contenido6;
+}
+
+#contenido7 {
+    background-color: var(--contenido-color);
+    grid-area: contenido7;
+}
+
+#contenido8 {
+    background-color: var(--contenido-color);
+    grid-area: contenido8;
+}
+
+
+#categoria1 {
+    grid-area: categoria1;
+}
+
+#categoria2 {
+    grid-area: categoria2;
+}
+
+#categoria3 {
+    grid-area: categoria3;
+}
+
+#categoria4 {
+    grid-area: categoria4;
+}
+
+#categoria5 {
+    grid-area: categoria5;
+}
+
+#categoria6 {
+    grid-area: categoria6;
+}
+
+/*FIN CONTENIDO GRUPO DE ARTICULOS*/
+
+
+/*CONTENIDO ARMAR PC 6 PC HISTORICO*/
+
+#armarpc {
+    background-color: var(--contenido-color);
+    grid-area: armarpc;
+}
+
+#pcarmada {
+    background-color: var(--contenido-color);
+    grid-area: pcarmada;
+}
+
+/*FIN CONTENIDO ARMAR PC 6 PC HISTORICO*/
+
+
+/*CONTENIDO ADMIN*/
+
+#basededatos {
+    background-color: var(--contenido-color);
+    grid-area: basededatos;
+}
+
+#agregarproducto{
+    background-color: var(--contenido-color);
+    grid-area: agregarproducto;
+}
+
+
+/*FIN CONTENIDO ADMIN*/

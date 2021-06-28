@@ -1,0 +1,32 @@
+Descripción
+VENTUS ofrece un diseño centrado en el rendimiento que mantiene los elementos esenciales para realizar cualquier tarea. Una disposición de triple ventilador en un diseño industrial rígido permite que esta tarjeta gráfica de aspecto elegante se adapte a cualquier construcción.
+
+BACKPLATE REFORZADO
+
+Una placa posterior con acabado cepillado de aspecto limpio refuerza la tarjeta.
+
+DISEÑO PCB A MEDIDA
+
+No todas las placas de circuito son iguales. Un diseño de PCB personalizado proporciona una mayor confiabilidad y un circuito de potencia reforzado para llevar la tarjeta al límite.
+
+Especificaciones
+MEMORY: 12GB GDDR6
+MOTOR GRÁFICO: NVIDIA® GeForce RTX™ 3060
+BUS STANDARD: PCI Express® Gen 4
+INTERFAZ DE MEMORIA: 192-bit
+RELOJ DE NÚCLEO: Boost: 1777 MHz
+VELOCIDAD DE MEMORIA: 15 Gbps
+MAXIMUM DISPLAYS: 4
+OUTPUT: DisplayPort x 3 (v1.4) / HDMI x 1 (Supports 4K@120Hz as specified in HDMI 2.1)
+SOPORTE HDCP: Y
+POWER CONSUMPTION (W):  170W
+RECOMMENDED POWER SUPPLY (W): 550W
+VIRTUAL REALITY READY: Y
+DIGITAL MAXIMUM RESOLUTION: 7680 x 4320
+POWER CONNECTORS: 8-pin x 1
+VERSIÓN SOPORTADA DE DIRECTX: 12 API
+VERSIÓN SOPORTADA DE OPENGL: 4.6
+Marca: MSI
+Modelo alfanumérico: RTX 3060 VENTUS 2X 12G OC 
+EAN: 4719072793814
+UPC: 824142240106

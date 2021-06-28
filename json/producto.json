@@ -1,0 +1,98 @@
+[
+    {   
+        "id":"1",
+        "descripcion":"Mouse Gamer",
+        "marca":"RAZER",
+        "modelo":"BASILISK ULTIMATE NEGRO",
+        "precio":50,
+        "obslinea1":"2000 DPI",
+        "obslinea2":"Smart Tracking",
+        "obslinea3":"Motion Sync",
+        "url":"https://i.postimg.cc/SR8nD6tp/item1.jpg"
+    },
+
+    {
+        "id":"2",
+        "descripcion":"Mouse Gamer",
+        "marca":"LOGITECH",
+        "modelo":"G203 Ligthsync",
+        "precio":58,
+        "obslinea1":"8000 DPI",
+        "obslinea2":"RGB",
+        "obslinea3":"Motion Sync",
+        "url":"https://i.postimg.cc/85fczdGr/item2.jpg"
+    },
+
+    {
+        "id":"3",
+        "descripcion":"Combo Perifericos",
+        "marca":"TEMPEST",
+        "modelo":"APOCALYPSE",
+        "precio":158,
+        "obslinea1":"Teclado mecanico RGB",
+        "obslinea2":"Mouse 4000 DPI RGB",
+        "obslinea3":"Auriculares",
+        "url":"https://i.postimg.cc/pd6yvGwH/item3.jpg"
+    },
+
+    {
+        "id":"4",
+        "descripcion":"Teclado Mecanico",
+        "marca":"SUIKO",
+        "modelo":"IVORY GAMING FULL RGB",
+        "precio":158,
+        "obslinea1":"Switch Kailh Red",
+        "obslinea2":"Tecnologia anti-ghosting",
+        "obslinea3":"Teclas programables",
+        "url":"https://i.postimg.cc/2563PRXG/item6.jpg"
+   },
+    
+    {
+        "id":"5",
+        "descripcion":"Notebook 14 pulg",
+        "marca":"EXO",
+        "modelo":"Smart C19 - Windows 10 Home Edition",
+        "precio":158,
+        "obslinea1":"Intel Celeron N3350",
+        "obslinea2":"RAM 4Gb",
+        "obslinea3":"SSD 128Gb",
+        "url":"https://i.postimg.cc/rF1d49r1/item4.jpg"
+    },
+
+    {
+        "id":"6",
+        "descripcion":"Notebook 17 pulg ",
+        "marca":"MSI",
+        "modelo":"GF75 THIN - Windows 10 Home Pro",
+        "precio":158,
+        "obslinea1":"Placa NVIDIA GTX 1660 Ti 6 GB",
+        "obslinea2":"RAM 16Gb",
+        "obslinea3":"SSD 512Gb",
+        "url":"https://i.postimg.cc/2y454zVk/item5.png"
+    },
+
+    {
+        "id":"7",
+        "descripcion":"Tablet 8 pulg ",
+        "marca":"SAMSUNG",
+        "modelo":"Galazy TAB A Negra",
+        "precio":158,
+        "obslinea1":"Capacidad= 32 Gb",
+        "obslinea2":"RAM 2Gb",
+        "obslinea3":"Dual Camara - WIFI",
+        "url":"https://i.postimg.cc/MZRXkYtC/item7.png"
+    },
+
+    {
+        "id":"8",
+        "descripcion":"Tablet 10 pulg ",
+        "marca":"KANJI",
+        "modelo":"LANDER+",
+        "precio":158,
+        "obslinea1":"Quad Core - Capacidad: 32 Gb",
+        "obslinea2":"RAM 2Gb",
+        "obslinea3":"Auricular Blanco + Funda",
+        "url":"https://i.postimg.cc/MZRXkYtC/item7.png"
+    }
+        
+]
