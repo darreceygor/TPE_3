@@ -86,10 +86,9 @@ nav ul {
 /******************************************/
 
 #catalogo {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr;
+    
 
 }
 
@@ -97,10 +96,8 @@ nav ul {
 @media screen and (min-width: 420px){
 
     #catalogo {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: stretch; 
+        display: grid;
+    grid-template-columns: 1fr 1fr;
 
     }
 
@@ -114,10 +111,8 @@ nav ul {
 @media screen and (min-width: 820px){
 
     #catalogo {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: stretch;
+        display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     }
 
     .img-item {
@@ -132,10 +127,8 @@ nav ul {
 @media screen and (min-width: 1024px){
 
     #catalogo {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: stretch;
+        display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     #img-item {
