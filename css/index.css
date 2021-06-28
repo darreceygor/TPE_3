@@ -81,8 +81,8 @@ header, footer {
 
     #catalogo {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
+        flex-wrap: nowrap; 
         align-items: stretch;
     }
 
