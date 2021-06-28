@@ -94,7 +94,7 @@ nav ul {
 }
 
 
-@media screen and (min-width: 360px){
+@media screen and (min-width: 420px){
 
     #catalogo {
         display: flex;
@@ -111,7 +111,7 @@ nav ul {
     
 }
 
-@media screen and (min-width: 720px){
+@media screen and (min-width: 820px){
 
     #catalogo {
         display: flex;
