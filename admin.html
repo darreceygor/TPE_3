@@ -71,7 +71,7 @@
                   <input type="text" id="obslinea3">
 
                 </div>
-
+                <form>Busqueda: <input id="txtBusqueda" type="text" onkeyup="Buscar();" /></form>
                 <div>
                   <button type="submit" class="enviar">Guardar</button>
                   <input type="hidden" name="id">
@@ -89,7 +89,7 @@
       </article>
       <article>
         <h2>Listado</h2>
-        <table class="crud-table">
+        <table class="crud-table" id="tblPersonas">
           <thead>
             <tr>
               <th>#</th>
@@ -134,6 +134,7 @@
     </div>
   </footer>
   <script src="js/producto_admin.js"></script>
+  <script src="js/buscar.js"></script>
   <!--   <script src="js/partial.js"></script> -->
 </body>
 
