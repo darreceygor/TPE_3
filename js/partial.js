@@ -74,76 +74,6 @@ function listarProd(datosProd){
 }
 
 
-async function tomarBtn () {
-    let btn = document.getElementsByClassName("enviar")
-
-    console.log(btn);
-
-    id = btn[4].name
-
-    console.log(id).addEventListener("click",ponerCarro);;
-
-
-let marca=[];
-let modelo=[];
-let precio=[];
-
-
-let cantidad=[0,0,0,0,0,0,0,0];
-let totalCarro=[0,0,0,0,0,0,0,0];
-let totalFinal=0;
-
-/* function agregarBtn(){
-let btn = document.getElementById("boton1").addEventListener("click",ponerCarro); */
-
-
-}
-
-
-function ponerCarro(data){
-
-  fetch('json/producto.json') 
-    .then(res => res.json()) 
-    .then(data =>{   
-     
-        let carro = document.querySelector("#carrito")
-        
-        cantidad[0] = cantidad[0]+1;
-        carro.innerHTML="";
-        console.log(cantidad[0]);
-        carro.innerHTML += 
-                `=> ${data[0].modelo} - 
-                 Cantidad: ${cantidad[0]} 
-                Precio: ${data[0].precio}`;
-                 
-                let precioTotal = document.querySelector("#totalCarro")
-
-                marca[0]=data[0].marca; console.log(marca[0]);
-                modelo[0]=data[0].modelo; console.log(modelo[0]);
-                precio[0]=data[0].precio; console.log(precio[0]);
-
-                sumarCarro(data[0].precio);
-                  
-               
-    })}
-
-function sumarCarro(valor){
-    
-        totalFinal+=valor
-        
-        actualizarCarro();
-
-}
-
-function actualizarCarro(){
-    let precioTotal = document.querySelector("#totalCarro")
-
-    precioTotal.innerHTML = "";
-    precioTotal.innerHTML = totalFinal;
-    
-}
-
-
 document.addEventListener("click", async e => {
 
     let carro = document.getElementById("carrito");
@@ -161,8 +91,9 @@ document.addEventListener("click", async e => {
 })
 
 let precioFinal=0;
+
 async function actualizarCarro(total){
-    let precioTotal = document.getElementsByClassName("totalCarro")
+    let precioTotal = document.getElementById("totalCarro")
     precioFinal+=total;
     precioTotal.innerHTML = "";
     precioTotal.innerHTML = precioFinal;
