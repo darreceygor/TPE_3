@@ -70,7 +70,6 @@ function listarProd(datosProd){
     }
 }
 
-
 document.addEventListener("click", async e => {
 
     let carro = document.getElementById("carrito");
