@@ -140,3 +140,30 @@ function actualizarCarro(){
     precioTotal.innerHTML = totalFinal;
     
 }
+
+
+document.addEventListener("click", async e => {
+
+    let carro = document.getElementById("carrito");
+
+    if (e.target.matches(".enviar")) {
+        let fila =` ${e.target.dataset.id} - ${e.target.dataset.marca}  
+                    ${e.target.dataset.modelo} = ${e.target.dataset.precio} <br>`;
+         
+        carro.innerHTML+= fila;   
+       
+        total=parseFloat(e.target.dataset.precio);
+        console.log(total)
+        actualizarCarro(total);
+    };
+})
+
+let precioFinal=0;
+async function actualizarCarro(total){
+    let precioTotal = document.getElementsByClassName("totalCarro")
+    precioFinal+=total;
+    precioTotal.innerHTML = "";
+    precioTotal.innerHTML = precioFinal;
+    
+}
+
