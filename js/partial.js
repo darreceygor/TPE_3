@@ -59,7 +59,9 @@ function listarProd(datosProd){
                     </p>
                                     
                         <div id="botones" >
-                                <button id="btn-agregar" class="enviar" name="boton${i}" >Agregar</button>
+                                <button id="btn-agregar" class="enviar" name="boton${i}" 
+                                data-id=${datosProd[i].id} data-marca=${datosProd[i].marca} 
+                                data-modelo=${datosProd[i].modelo} data-precio=${datosProd[i].precio} >Agregar</button>
                         </div>
                     </div>
                 </div>    
