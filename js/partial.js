@@ -68,9 +68,6 @@ function listarProd(datosProd){
                 </article>
     `
     }
-
-    tomarBtn();
-
 }
 
 
