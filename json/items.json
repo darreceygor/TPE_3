@@ -1,0 +1,8 @@
+[
+    {
+    "productos" :["Mouse Gamer", "Mouse Gamer", "Combo", "Teclado Mecanico", "Notebook 14 pulg", "Notebook 17 pulg", "Tablet 8", "Tablet 10"],
+    "imgGrandes" : ["../img/item1.jpg", "../img/item2.jpg", "img/item3.jpg", "img/item6.jpg", "img/item4.jpg", "img/item5.png", "img/item7.jpg", "img/item8.jpg", "img/productos/9.jpg"],
+    
+    }
+
+]

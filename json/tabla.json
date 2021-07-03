@@ -1,0 +1,47 @@
+[
+    {   
+        "id":1,
+        "fecha":"10/12/2020",
+        "componente":"Micropocesador",
+        "cantidad": 1,
+        "modelo":"Intel",
+        "descripcion":"I5-11400 4.4Ghz 12Mb S.1200"
+    },
+
+    {
+        "id":1,
+        "fecha":"10/12/2020",
+        "componente":"Motherboard",
+        "cantidad": 1,
+        "modelo":"ASUS",
+        "descripcion":"Prime Z590M-PLUS 1200"
+    },
+
+    {   
+        "id":1,
+        "fecha":"10/12/2020",
+        "componente":"RAM",
+        "cantidad": 2,
+        "modelo":"DDR4",
+        "descripcion":"Kingston HyperX Fury Black 8GB 2400 Mhz"
+    },
+
+    {   
+        "id":1,
+        "fecha":"10/12/2020",
+        "componente":"Almacenamiento",
+        "cantidad": 1,
+        "modelo":"SSD",
+        "descripcion":"240GB Kingston A400"
+    },
+
+    {   
+        "id":1,
+        "fecha":"10/12/2020",
+        "componente":"Almacenamiento",
+        "cantidad": 1,
+        "modelo":"HHD",
+        "descripcion":"HDD 2TB Seagate BarraCuda"
+    }
+
+]
