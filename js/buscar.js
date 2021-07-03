@@ -1,5 +1,7 @@
+var inputBusqueda = document.getElementById('txtBusqueda');
+inputBusqueda.addEventListener('keyup', Buscar);
 function Buscar() {
-    var tabla = document.getElementById('tblPersonas');
+    var tabla = document.getElementById('buscar-item');
     var busqueda = document.getElementById('txtBusqueda').value.toLowerCase();
     var cellsOfRow="";
     var found=false;

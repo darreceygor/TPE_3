@@ -10,11 +10,11 @@ function partial(event)
     
 }
 
-function ponerSB(event)
+async function ponerSB(event)
 {
     document.querySelector("#sidebar");
     let text = "partial/sidebar.html";
-    fetch(text)
+    await fetch(text)
         .then(res => res.text())
         .then(text => {
                 document.querySelector("#sidebar").innerHTML = text;
@@ -60,39 +60,42 @@ function listarProd(datosProd){
                                     
                         <div id="botones" >
                                 <button id="btn-agregar" class="enviar" name="boton${i}" 
-                                data-id=${datosProd[i].id} data-marca=${datosProd[i].marca} 
-                                data-modelo=${datosProd[i].modelo} data-precio=${datosProd[i].precio} >Agregar</button>
+                                data-id="${datosProd[i].id}" data-marca="${datosProd[i].marca}" 
+                                data-modelo="${datosProd[i].modelo}" data-precio="${datosProd[i].precio}" >Agregar</button>
                         </div>
                     </div>
                 </div>    
                 </article>
     `
     }
-}
 
-document.addEventListener("click", async e => {
 
-    let carro = document.getElementById("carrito");
+    /*************CARRO**************/
 
-    if (e.target.matches(".enviar")) {
-        let fila =` ${e.target.dataset.id} - ${e.target.dataset.marca}  
-                    ${e.target.dataset.modelo} = ${e.target.dataset.precio} <br>`;
-         
-        carro.innerHTML+= fila;   
-       
-        total=parseFloat(e.target.dataset.precio);
-        console.log(total)
-        actualizarCarro(total);
-    };
-})
+    document.addEventListener("click", async e=> {
+        let carro = document.getElementById("carrito");
 
-let precioFinal=0;
+        if (e.target.matches(".enviar")){
+            let fila =`${e.target.dataset.id} - ${e.target.dataset.marca} ${e.target.dataset.modelo} == ${e.target.dataset.precio} <br>`
 
-async function actualizarCarro(total){
-    let precioTotal = document.getElementById("totalCarro")
-    precioFinal+=total;
-    precioTotal.innerHTML = "";
-    precioTotal.innerHTML = precioFinal;
-    
+            carro.innerHTML+=fila;
+
+            total=parseFloat(e.target.dataset.precio);
+
+            actualizarCarro(total);
+        };
+    })
+
+    let precioFinal=0;
+
+    async function actualizarCarro(total){
+        let precioTotal = document.getElementById("totalCarro");
+
+        precioFinal+=total;
+        precioTotal.innerHTML="";
+        precioTotal.innerHTML=precioFinal;
+    }
+
+
 }
 

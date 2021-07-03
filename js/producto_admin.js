@@ -1,4 +1,3 @@
-
 const d = document
 const url=`https://60c96f9a772a7600172037ef.mockapi.io/api/productos/productos/`
 
@@ -9,7 +8,6 @@ const url=`https://60c96f9a772a7600172037ef.mockapi.io/api/productos/productos/`
   $fragment = d.createDocumentFragment();
 
 const getAll = async () => {
-  
   try {
     let res = await fetch(url),
       json = await res.json();
@@ -54,8 +52,9 @@ d.addEventListener("submit", async e => {
 
 d.addEventListener("click", async e => {
   if (e.target.matches(".edit")) {
-    $title.textContent = "Editar";
-
+    $title.textContent = `Edit ID ${e.target.dataset.id}` ;
+    
+    
     $form.id.value = e.target.dataset.id,
     $form.marca.value = e.target.dataset.marca,
     $form.modelo.value = e.target.dataset.modelo,
@@ -63,6 +62,7 @@ d.addEventListener("click", async e => {
     $form.obslinea1.value = e.target.dataset.obslinea1,
     $form.obslinea2.value = e.target.dataset.obslinea2,
     $form.obslinea3.value = e.target.dataset.obslinea3;
+
   }
 
   if (e.target.matches(".delete")) {
