@@ -119,3 +119,61 @@ label {
       height: 500px;
       border: solid 1px black;
    }
+   .formText{
+     color: pink;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+
+   }
+   #txtBusqueda{
+     
+     padding-left: 5px;
+     border: solid black 1px;
+   }
+   .divBusqueda{
+    
+      margin-left: 37%;
+      display: flex;
+      background:linear-gradient(30deg,  #305250,  #34495e, #3a4e4e);
+      margin-bottom: 5px;
+      padding: 2px;
+      padding-right: 0%;
+      width: 300px;
+      border: white 2px inset;
+      border-radius: 3px;
+      justify-content: space-around;
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+    #form11 label{
+      color: white;
+      font-size: 20px;
+      margin-top: 0%;
+      padding-top: 0%;
+     
+    }
+    #forml2 label{
+      color: white;
+      font-size: 20px;
+      margin-top: 0%;
+      padding-top: 0%;
+    }
+    #form11{
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 10px;
+    }
+    #form11 input{
+      height: 25px;
+    }
+    #forml2{
+      display: flex;
+      justify-content: space-around;
+    }
+    #forml2 input{
+      height: 25px;
+    }
+    .listadoArticle{
+      color: white;
+    }
+   

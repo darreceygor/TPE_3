@@ -1,5 +1,6 @@
 const d = document
 const url=`https://60c96f9a772a7600172037ef.mockapi.io/api/productos/productos/`
+const imgDefecto=`../img/armando-pc.jpg`
 
   $table = d.querySelector(".crud-table"),
   $form = d.querySelector(".crud-form"),
@@ -56,6 +57,7 @@ d.addEventListener("click", async e => {
     
     
     $form.id.value = e.target.dataset.id,
+    $form.descripcion.value = e.target.dataset.descripcion,
     $form.marca.value = e.target.dataset.marca,
     $form.modelo.value = e.target.dataset.modelo,
     $form.precio.value = e.target.dataset.precio,
@@ -76,6 +78,7 @@ d.addEventListener("click", async e => {
 
 function itemEdit(el) {
     $template.querySelector(".edit").dataset.id = el.id;
+    $template.querySelector(".edit").dataset.descripcion = el.descripcion;
     $template.querySelector(".edit").dataset.marca = el.marca;
     $template.querySelector(".edit").dataset.modelo = el.modelo;
     $template.querySelector(".edit").dataset.precio = el.precio;
@@ -86,6 +89,7 @@ function itemEdit(el) {
 
 function itemN(el) {
     $template.querySelector(".id").textContent = el.id;
+    $template.querySelector(".descripcion").textContent = el.descripcion;
     $template.querySelector(".marca").textContent = el.marca;
     $template.querySelector(".modelo").textContent = el.modelo;
     $template.querySelector(".precio").textContent = el.precio;
@@ -122,12 +126,14 @@ async function editarItem(e) {
                 "Content-type": "application/json; charset=utf-8"
             },
             body: JSON.stringify({
+                descripcion: e.target.descripcion.value,
                 marca: e.target.marca.value,
                 modelo: e.target.modelo.value,
                 precio: e.target.precio.value,
                 obslinea1: e.target.obslinea1.value,
                 obslinea2: e.target.obslinea2.value,
-                obslinea3: e.target.obslinea3.value
+                obslinea3: e.target.obslinea3.value,
+                
             })
         }, res = await fetch(`${url}${e.target.id.value}`, options), json = await res.json();
 
@@ -149,12 +155,14 @@ async function crearItem(e) {
                 "Content-type": "application/json; charset=utf-8"
             },
             body: JSON.stringify({
+                descripcion: e.target.descripcion.value,
                 marca: e.target.marca.value,
                 modelo: e.target.modelo.value,
                 precio: e.target.precio.value,
                 obslinea1: e.target.obslinea1.value,
                 obslinea2: e.target.obslinea2.value,
                 obslinea3: e.target.obslinea3.value,
+                url:imgDefecto
             })
         }, res = await fetch(url, options), json = await res.json();
 

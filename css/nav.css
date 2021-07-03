@@ -1,21 +1,24 @@
 
 /*MENU PRINCIPAL*/
 nav {
-    background: lightblue; 
+    display: flex;
+    background: none; 
     height: 10vh;
     grid-area: nav;
     padding: 15px;
-
+    justify-content: center;
 }
 
 nav ul {
     float: right;
     margin-right:25px ;
     display: none;
+    color: white;
 }
 
 /*todos los items de la lista en linea*/
 nav ul li {
+    
     display: inline-block;
     line-height: 80px; /*especifica la altura mínima de los cuadros de línea dentro del elemento.*/
     margin: 0 15px;
@@ -43,7 +46,7 @@ nav>ul {
     position: fixed;
     width: 50%;
     /*height: 80vh;*/
-    background: #34495e;
+    background:linear-gradient(30deg,  #305250,  #34495e, #3a4e4e);
     top: 45%;
     left: -110%; /*oculta el bloque del menu*/
     text-align: center;
@@ -55,6 +58,11 @@ nav ul li {
     display: block;
     margin: 50px 0;
     line-height: 30px ;
+}
+nav ul li a{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
 }
 
 /*FIN MENU PRINCIPAL*/
@@ -141,7 +149,7 @@ nav ul li {
         margin-right: 25px;
         width: 75%;
         height: 60px;
-        background: #34495e;
+        background:linear-gradient(30deg,  #305250,  #34495e, #3a4e4e);
         border-radius: 30px;
         top: 45%;
         left: 0%;

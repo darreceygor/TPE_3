@@ -47,6 +47,9 @@
                             </div>
                             <form class="crud-form">
                       
+                              <Label for="marca">Descripcion</Label>
+                              <input type="text" id="descripcion">
+
                               <Label for="marca">Marca</Label>
                               <input type="text" id="marca">
                       
@@ -55,14 +58,15 @@
                       
                               <Label for="precio">Precio</Label>
                               <input type="number" id="precio">
-                      
-                              <label for="Linea 1">Linea 1 </label>
-                              <input type="text" id="obslinea1">
-                              <label for="Linea 2">Linea 2 </label>
-                              <input type="text" id="obslinea2">
-                              <label for="Linea 3">Linea 3</label>
-                              <input type="text" id="obslinea3">
-                      
+                              
+                              <div>
+                                <label for="Linea 1">Linea 1 </label>
+                                <input type="text" id="obslinea1">
+                                <label for="Linea 2">Linea 2 </label>
+                                <input type="text" id="obslinea2">
+                                <label for="Linea 3">Linea 3</label>
+                                <input type="text" id="obslinea3">
+                              </div>
                               <button type="submit" class="enviar">Guardar</button>
                               <input type="hidden" name="id">
                             </form>
@@ -77,6 +81,7 @@
                               <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th>Descripcion</th>
                                     <th>Marca</th>
                                     <th>Modelo</th>
                                     <th>Precio</th>
@@ -94,6 +99,7 @@
                         <template id="crud-template">
                           <tr>
                             <td class="id"></td>
+                            <td class="descripcion"></td>
                             <td class="marca"></td>
                             <td class="modelo"></td>
                             <td class="precio"></td>
