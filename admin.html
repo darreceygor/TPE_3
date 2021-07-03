@@ -1,141 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" contenido="IE=edge">
-  <meta name="viewport" contenido="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="css/cards.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/index.css">
 
-  <title>Venta de Articulos de PC</title>
+    <title>Administrador</title>
 </head>
+<body> 
+    <div class="container_admin">
+        <header>
+            
+        </header>
 
-<body>
+        <nav>
 
-  <header>
-    <!--TITULO E IMAGEN DESDE CSS  -->
-  </header>
+            <input type="checkbox" id="check">
+                <label for="check">
+                    <img src="img/menu.png" class="menu" >
+                    <img src="img/cancel.png" class="cancel">
+                </label>
 
-  <nav>
+                 
+            <img src="img/logo.png" alt="LOGO" class="logo">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="armado.html">Servicios</a></li>
+                <li><a href="#">Historia</a></li>
+                <li><a href="admin.html">Administrador</a></li>
+            </ul>
+        </nav>
+            
+        <caption>Listado de Productos</caption>
+                <article id="basededatos">
+                    <div>
+                        
+                        <section class="crud">
+                          <article>
+                            <div id="crud-title-op">  
+                                <h3 class="crud-title">Nuevo</h3>
+                            </div>
+                            <form class="crud-form">
+                      
+                              <Label for="marca">Marca</Label>
+                              <input type="text" id="marca">
+                      
+                              <Label for=modelo>Modelo</Label>
+                              <input type="text" id="modelo">
+                      
+                              <Label for="precio">Precio</Label>
+                              <input type="number" id="precio">
+                      
+                              <label for="Linea 1">Linea 1 </label>
+                              <input type="text" id="obslinea1">
+                              <label for="Linea 2">Linea 2 </label>
+                              <input type="text" id="obslinea2">
+                              <label for="Linea 3">Linea 3</label>
+                              <input type="text" id="obslinea3">
+                      
+                              <button type="submit" class="enviar">Guardar</button>
+                              <input type="hidden" name="id">
+                            </form>
 
-    <input type="checkbox" id="check">
-    <label for="check">
-      <img src="img/menu.png" class="menu">
-      <img src="img/cancel.png" class="cancel">
-    </label>
+                            <form id="formBusqueda"><div class="divBusqueda"><h4 class="formText">Busqueda:</h4><input id="txtBusqueda" type="text"></div></form>
+                           
 
+                          </article>
+                          <article>
+                            <h2>Listado</h2>
+                            <table class="crud-table" id="buscar-item">
+                              <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Marca</th>
+                                    <th>Modelo</th>
+                                    <th>Precio</th>
+                                    <th>Imagen</th>
+                                    <th>Linea 1</th>
+                                    <th>Linea 2</th>
+                                    <th>Linea 3</th>
+                                    <th>Acciones</th>
+                                </tr>
+                              </thead>
+                              <tbody></tbody>
+                            </table>
+                          </article>
+                        </section>
+                        <template id="crud-template">
+                          <tr>
+                            <td class="id"></td>
+                            <td class="marca"></td>
+                            <td class="modelo"></td>
+                            <td class="precio"></td>
+                            <td class="url"></td>
+                            <td class="obslinea1"></td>
+                            <td class="obslinea2"></td>
+                            <td class="obslinea3"></td>
+                            <td>
+                              <button class="edit">Editar</button>
+                              <button class="delete">Eliminar</button>
+                            </td>
+                          </tr>
+                        </template>
 
-    <img src="img/logo.png" alt="LOGO" class="logo">
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="#">Acerca de</a></li>
-      <li><a href="armado.html">Servicios</a></li>
-      <li><a href="#">Historia</a></li>
-      <li><a href="admin.html">Administrador</a></li>
-    </ul>
+                    </div>
 
-  </nav>
+                </article> 
 
-  <div id="frame">
-
-    <div class="container">
-      <article id="basededatos">
-        <div>
-          <section class="crud">
-            <article>
-
-
-              <form class="crud-form">
-
-                <div id="form11">
-                  <Label for="marca">Marca</Label>
-                  <input type="text" id="marca">
-
-                  <Label for=modelo>Modelo</Label>
-                  <input type="text" id="modelo">
-
-                  <Label for="precio">Precio</Label>
-                  <input type="number" id="precio">
-                </div>
-
-                <div id="forml2">
-
-                  <label for="Linea 1">Linea 1 </label>
-                  <input type="text" id="obslinea1">
-                  <label for="Linea 2">Linea 2 </label>
-                  <input type="text" id="obslinea2">
-                  <label for="Linea 3">Linea 3</label>
-                  <input type="text" id="obslinea3">
-
-                </div>
-                <form>Busqueda: <input id="txtBusqueda" type="text" onkeyup="Buscar();" /></form>
-                <div>
-                  <button type="submit" class="enviar">Guardar</button>
-                  <input type="hidden" name="id">
-                </div>
-
-                <div id="crud-title-op">
-
-                  <h3 class="crud-title">Agregar</h3>
-                </div>
-
-
-        </div>
-
-        </form>
-      </article>
-      <article>
-        <h2>Listado</h2>
-        <table class="crud-table" id="tblPersonas">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Marca</th>
-              <th>Modelo</th>
-              <th>Precio</th>
-              <th>Imagen</th>
-              <th>Linea 1</th>
-              <th>Linea 2</th>
-              <th>Linea 3</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </article>
-      </section>
-      <template id="crud-template">
-        <tr>
-          <td class="id"></td>
-          <td class="marca"></td>
-          <td class="modelo"></td>
-          <td class="precio"></td>
-          <td class="url"></td>
-          <td class="obslinea1"></td>
-          <td class="obslinea2"></td>
-          <td class="obslinea3"></td>
-          <td>
-            <button class="edit">Editar</button>
-            <button class="delete">Eliminar</button>
-          </td>
-        </tr>
-      </template>
+ 
+                <footer>
+                    <div id="firma">
+                        <span> TUDAI @ 2021 - Emanuel Beorlegui - Diego Arreceygor</span> 
+                    </div> 
+                </footer>           
+    
     </div>
-    </article>
-  </div>
 
-  <footer>
-    <!-- IMAGEN DESDE CSS  -->
-    <div id="firma">
-      <span> TUDAI @ 2021 - Emanuel Beorlegui - Diego Arreceygor</span>
-    </div>
-  </footer>
-  <script src="js/producto_admin.js"></script>
-  <script src="js/buscar.js"></script>
-  <!--   <script src="js/partial.js"></script> -->
+    <script src="js/producto_admin.js"></script>
+    <script src="js/buscar.js"></script>
 </body>
-
 </html>

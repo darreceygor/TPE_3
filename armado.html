@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/index.css">
+    
+    <title>Servicios a Cliente - PC Armadas</title>
+</head>
+<body onload="traer()">
+
+    <div class="container_armado">
+        <header>
+            
+        </header>
+
+        <nav>
+
+            <input type="checkbox" id="check">
+                <label for="check">
+                    <img src="img/menu.png" class="menu" >
+                    <img src="img/cancel.png" class="cancel">
+                </label>
+
+                 
+            <img src="img/logo.png" alt="LOGO" class="logo">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="armado.html">Servicios</a></li>
+                <li><a href="#">Historia</a></li>
+                <li><a href="admin.html">Administrador</a></li>
+            </ul>
+        </nav>
+
+        <!--<section id="armado-contacto">-->
+                
+        </section>    
+
+                <article id="armarpc">
+                    <h2>ARMA TU PC</h2>
+                    <h3>A medida!!</h3>
+                    <br>
+                    Procesador <select name="pc">
+                        <option value="amd">AMD</option>
+                        <option value="intel">INTEL</option>
+                    </select>
+                    <input type="text"><br><br>
+
+                    Placa Madre <select name="pc">
+                        <option value="amd">Asus</option>
+                        <option value="intel">ASRock</option>
+                        <option value="intel">Gigabyte</option>
+                    </select>
+                    <input type="text"><br><br>
+
+                    Memoria RAM <select name="pc">
+                        <option value="amd">DDR</option>
+                        <option value="intel">DDR2</option>
+                        <option value="intel">DDR3</option>
+                        <option value="intel">DDR4</option>
+                    </select>
+                    <select name="pc" >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <input type="text"> <br><br>        
+                    
+                    Almacenamiento Primario<select name="pc">
+                        <option value="amd">SSD</option>
+                        <option value="intel">HHD</option>
+                    </select>
+                    Capacidad <input type="text"> <br><br>   
+
+                    Almacenamiento Secundario<select name="pc" >
+                        <option value="amd">SSD</option>
+                        <option value="intel">HHD</option>
+                    </select>
+                    Capacidad <input type="text"> <br><br>     
+                    
+                    Unidades Opticas <select name="pc" >
+                        <option value="amd">Disquetera</option>
+                        <option value="intel">Lectora CD</option>
+                        <option value="intel">Lectora DVD</option>
+                        <option value="intel">Grabadora CD</option>
+                        <option value="intel">Grabadora DVD</option>
+                        <option value="intel">Grabadora BlueRay</option>
+                    </select>
+                    <select name="pc" >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select> <br><br>
+                    
+                    Perifericos <input type="text"> <br><br>
+                </article>
+        
+                <article id="pcarmada">
+
+                    <div>
+                <!--<button onclick="traer()">TRAER</button>-->
+
+                        <table>
+                            <thead>
+                            <caption>Ultima PC armada por nuestros clientes</caption>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Fecha</th>
+                                    <th id="alinea">Componente</th>
+                                    <th>Cantidad</th>
+                                    <th>Modelo</th>
+                                    <th id="alinea">Descripcion</th>
+                                </tr>
+                            </thead>
+                                
+                            <tbody id="contenido">
+                                
+                            </tbody>
+                        
+                       </table>
+
+                    </div>
+
+                </article> 
+  
+                    <footer>
+                        <div id="firma">
+                            <span> TUDAI @ 2021 - Emanuel Beorlegui - Diego Arreceygor</span> 
+                        </div> 
+                    </footer>           
+    
+    </div>
+
+    <script src="js/producto_servicio.js"></script>
+</body>
+</html>
